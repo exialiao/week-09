@@ -1,0 +1,21 @@
+import Preloader from '../public/assets/js/scenes/preloader.js';
+import Level1 from '../public/assets/js/scenes/level-1.js';
+import Level2 from '../public/assets/js/scenes/level-2.js';
+
+const config = {
+  type: Phaser.AUTO,
+  width: 800,
+  height: 600,
+  physics: {
+    default: 'arcade',
+    arcade: {
+      gravity: { y: 300 },
+      debug: false,
+    },
+  },
+  scene: [Preloader, Level1, Level2],
+};
+
+let game = new Phaser.Game(config);
+
+
